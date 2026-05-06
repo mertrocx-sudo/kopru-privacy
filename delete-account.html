@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hesap Silme - Bridge</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0F140F 100%);
+    color: #EDF7ED;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(15, 20, 15, 0.85);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 40px;
+  }
+  h1 {
+    color: #00C853;
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .subtitle {
+    color: #8fa89f;
+    font-size: 14px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 16px;
+  }
+  h2 {
+    color: #FFD700;
+    font-size: 18px;
+    margin: 24px 0 12px;
+    letter-spacing: 0.3px;
+  }
+  p {
+    color: #c9d4c9;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  ul {
+    margin-left: 20px;
+    color: #c9d4c9;
+  }
+  ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  .method {
+    background: rgba(0, 200, 83, 0.06);
+    border: 1.5px solid rgba(0, 200, 83, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+  }
+  .method-title {
+    color: #00C853;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .danger-box {
+    background: rgba(239, 68, 68, 0.06);
+    border: 1.5px solid rgba(239, 68, 68, 0.4);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 20px 0;
+  }
+  .danger-title {
+    color: #EF4444;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  a.btn {
+    display: inline-block;
+    background: #00C853;
+    color: #0a0a0a;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+  }
+  a.btn:hover { opacity: 0.85; }
+  code {
+    background: rgba(0,0,0,0.4);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #FFD700;
+    font-size: 14px;
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+    color: #5A6E5A;
+    font-size: 12px;
+  }
+  .lang-switch {
+    text-align: right;
+    margin-bottom: 12px;
+  }
+  .lang-switch a {
+    color: #8fa89f;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .lang-switch a:hover { color: #00C853; }
+  .en { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="lang-switch">
+    <a href="#" onclick="toggleLang(); return false;" id="langBtn">🇬🇧 English</a>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div class="tr">
+    <h1>🗑️ Hesap Silme Talebi</h1>
+    <p class="subtitle">Bridge (Köprü) - Futbol Bilgi Oyunu</p>
+
+    <h2>📱 Yöntem 1: Uygulama İçinden Sil (Önerilen)</h2>
+    <div class="method">
+      <div class="method-title">✓ En hızlı yol</div>
+      <p>Hesabını uygulama içinden tek dokunuşta silebilirsin:</p>
+      <ul>
+        <li>Bridge uygulamasını aç</li>
+        <li>Profil → ⚙️ Uygulama Ayarları</li>
+        <li>"Tehlikeli Bölge" kısmında 🗑️ <strong>Hesabımı Sil</strong></li>
+        <li>3 adımlı doğrulamayı tamamla</li>
+      </ul>
+    </div>
+
+    <h2>📧 Yöntem 2: E-posta ile Talep</h2>
+    <div class="method">
+      <div class="method-title">Uygulamayı silmiş kullanıcılar için</div>
+      <p>Aşağıdaki bilgilerle bize e-posta gönder:</p>
+      <ul>
+        <li><strong>E-posta adresin</strong> (kayıtlı olduğun)</li>
+        <li><strong>Kullanıcı adın</strong></li>
+        <li>Talep konusu: <code>Hesap Silme Talebi</code></li>
+      </ul>
+      <a href="mailto:mertrocx@gmail.com?subject=Bridge%20-%20Hesap%20Silme%20Talebi&body=Merhaba%2C%0A%0AHesabımın%20silinmesini%20talep%20ediyorum.%0A%0AE-posta%3A%20%0AKullanıcı%20Adı%3A%20%0A%0Aİlginiz%20için%20teşekkürler." class="btn">📧 E-posta Gönder</a>
+    </div>
+
+    <h2>🗂️ Silinen Veriler</h2>
+    <p>Hesabını sildiğinde aşağıdaki tüm verilerin <strong>kalıcı olarak silinir</strong>:</p>
+    <ul>
+      <li>E-posta ve şifre bilgilerin</li>
+      <li>Kullanıcı adı ve profil fotoğrafın</li>
+      <li>Oyun istatistikleri (lig, level, win/loss)</li>
+      <li>Kor ve JOD bakiyen</li>
+      <li>Sahip olduğun avatarlar ve diğer öğeler</li>
+      <li>Arkadaş listesi ve mesaj geçmişi</li>
+      <li>Sohbet mesajları (global ve özel)</li>
+    </ul>
+
+    <div class="danger-box">
+      <div class="danger-title">⚠️ Önemli Uyarı</div>
+      <p style="margin: 0;">Hesap silme işlemi <strong>geri alınamaz</strong>. İşlem tamamlandıktan sonra verilerin kurtarılamaz.</p>
+    </div>
+
+    <h2>⏱️ İşlem Süresi</h2>
+    <p>Uygulama içinden silinen hesaplar <strong>anında</strong> silinir. E-posta talepleri ise <strong>30 gün</strong> içinde işleme alınır.</p>
+
+    <h2>📞 İletişim</h2>
+    <p>Sorun mu yaşıyorsun? <a href="mailto:mertrocx@gmail.com" style="color: #00C853;">mertrocx@gmail.com</a> adresine yazabilirsin.</p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="en">
+    <h1>🗑️ Account Deletion Request</h1>
+    <p class="subtitle">Bridge - Football Trivia Game</p>
+
+    <h2>📱 Method 1: Delete from App (Recommended)</h2>
+    <div class="method">
+      <div class="method-title">✓ Fastest way</div>
+      <p>You can delete your account directly from the app:</p>
+      <ul>
+        <li>Open Bridge app</li>
+        <li>Profile → ⚙️ App Settings</li>
+        <li>In "Danger Zone" section, tap 🗑️ <strong>Delete My Account</strong></li>
+        <li>Complete the 3-step verification</li>
+      </ul>
+    </div>
+
+    <h2>📧 Method 2: Email Request</h2>
+    <div class="method">
+      <div class="method-title">For users who already uninstalled the app</div>
+      <p>Send us an email with the following information:</p>
+      <ul>
+        <li>Your <strong>email address</strong> (registered)</li>
+        <li>Your <strong>username</strong></li>
+        <li>Subject: <code>Account Deletion Request</code></li>
+      </ul>
+      <a href="mailto:mertrocx@gmail.com?subject=Bridge%20-%20Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20my%20account.%0A%0AEmail%3A%20%0AUsername%3A%20%0A%0AThank%20you." class="btn">📧 Send Email</a>
+    </div>
+
+    <h2>🗂️ Deleted Data</h2>
+    <p>When you delete your account, the following data is <strong>permanently deleted</strong>:</p>
+    <ul>
+      <li>Email and password</li>
+      <li>Username and profile picture</li>
+      <li>Game statistics (league, level, win/loss)</li>
+      <li>Kor and JOD balance</li>
+      <li>Owned avatars and other items</li>
+      <li>Friends list and message history</li>
+      <li>Chat messages (global and private)</li>
+    </ul>
+
+    <div class="danger-box">
+      <div class="danger-title">⚠️ Important Warning</div>
+      <p style="margin: 0;">Account deletion is <strong>irreversible</strong>. Once completed, your data cannot be recovered.</p>
+    </div>
+
+    <h2>⏱️ Processing Time</h2>
+    <p>Accounts deleted from the app are removed <strong>instantly</strong>. Email requests are processed within <strong>30 days</strong>.</p>
+
+    <h2>📞 Contact</h2>
+    <p>Having issues? Email us at <a href="mailto:mertrocx@gmail.com" style="color: #00C853;">mertrocx@gmail.com</a></p>
+  </div>
+
+  <div class="footer">
+    Bridge © 2026 · Geliştirici: Mert Kaplan (RocX)
+  </div>
+
+</div>
+
+<script>
+function toggleLang() {
+  const tr = document.querySelector('.tr');
+  const en = document.querySelector('.en');
+  const btn = document.getElementById('langBtn');
+  if (tr.style.display === 'none') {
+    tr.style.display = 'block';
+    en.style.display = 'none';
+    btn.textContent = '🇬🇧 English';
+    document.title = 'Hesap Silme - Bridge';
+  } else {
+    tr.style.display = 'none';
+    en.style.display = 'block';
+    btn.textContent = '🇹🇷 Türkçe';
+    document.title = 'Account Deletion - Bridge';
+  }
+}
+</script>
+
+</body>
+</html>

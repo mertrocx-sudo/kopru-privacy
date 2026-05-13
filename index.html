@@ -1,332 +1,313 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Köprü · Gizlilik Politikası / Privacy Policy</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
-    background: #0a0f0a;
-    color: #e5ebe5;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 24px 60px;
-  }
-  header {
-    text-align: center;
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(86, 235, 86, 0.15);
-  }
-  .logo {
-    display: inline-block;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    color: #56eb56;
-    padding: 8px 20px;
-    border: 2px solid rgba(86, 235, 86, 0.3);
-    border-radius: 12px;
-    margin-bottom: 16px;
-  }
-  h1 {
-    font-size: 22px;
-    color: #e5ebe5;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-  }
-  .lang-switch {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 32px;
-  }
-  .lang-btn {
-    padding: 8px 18px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    color: #8fa89f;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: all 0.15s;
-  }
-  .lang-btn.active {
-    background: rgba(86, 235, 86, 0.1);
-    border-color: #56eb56;
-    color: #56eb56;
-  }
-  .lang-btn:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.08);
-    color: #e5ebe5;
-  }
-  section {
-    margin-bottom: 28px;
-    padding: 20px;
-    background: rgba(15, 20, 15, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 14px;
-  }
-  h2 {
-    font-size: 16px;
-    color: #56eb56;
-    font-weight: 800;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
-  }
-  p {
-    color: #bcc8bc;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
-  }
-  li {
-    color: #bcc8bc;
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-  strong {
-    color: #e5ebe5;
-  }
-  .meta {
-    text-align: center;
-    color: #5a6e5a;
-    font-size: 12px;
-    margin-top: 32px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  .content-section { display: none; }
-  .content-section.active { display: block; }
-  a {
-    color: #56eb56;
-    text-decoration: none;
-    font-weight: 700;
-  }
-  a:hover { text-decoration: underline; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge · Gizlilik Politikası / Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0f0a; color: #d4e8d4; line-height: 1.7; padding: 24px 16px 60px; max-width: 760px; margin: 0 auto; }
+    h1 { color: #FFD700; font-size: 28px; margin-bottom: 4px; }
+    h2 { color: #00C853; font-size: 17px; margin: 28px 0 8px; border-bottom: 1px solid rgba(0,200,83,0.2); padding-bottom: 6px; }
+    h3 { color: #FFD700; font-size: 14px; margin: 16px 0 6px; }
+    p { margin-bottom: 10px; font-size: 14px; color: #b0c8b0; }
+    ul { margin: 8px 0 12px 20px; }
+    li { font-size: 14px; color: #b0c8b0; margin-bottom: 4px; }
+    a { color: #00C853; }
+    .header { text-align: center; padding: 32px 0 24px; border-bottom: 1px solid rgba(255,215,0,0.2); margin-bottom: 24px; }
+    .emoji { font-size: 48px; display: block; margin-bottom: 12px; }
+    .badge { display: inline-block; background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.3); color: #00C853; border-radius: 20px; padding: 4px 14px; font-size: 12px; font-weight: 700; margin: 4px; cursor: pointer; }
+    .badge.active { background: rgba(255,215,0,0.1); border-color: rgba(255,215,0,0.4); color: #FFD700; }
+    .section { margin-bottom: 8px; }
+    .lang-tr .en { display: none; }
+    .lang-en .tr { display: none; }
+    .highlight { background: rgba(255,215,0,0.06); border-left: 3px solid #FFD700; padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+    .updated { color: #5A6E5A; font-size: 12px; margin-top: 32px; text-align: center; }
+    .contact-box { background: rgba(0,200,83,0.06); border: 1px solid rgba(0,200,83,0.2); border-radius: 12px; padding: 16px; margin-top: 12px; text-align: center; }
+    .contact-box a { font-size: 15px; font-weight: 700; }
+  </style>
 </head>
-<body>
-<div class="container">
-  <header>
-    <div class="logo">⚽ KÖPRÜ</div>
-    <h1 id="headerTitle">Gizlilik Politikası</h1>
-  </header>
+<body class="lang-tr">
 
-  <div class="lang-switch">
-    <button class="lang-btn active" onclick="switchLang('tr')" id="btn-tr">🇹🇷 Türkçe</button>
-    <button class="lang-btn" onclick="switchLang('en')" id="btn-en">🇬🇧 English</button>
+<div class="header">
+  <span class="emoji">⚽</span>
+  <h1>BRIDGE: Futbol Trivia</h1>
+  <p style="color:#5A6E5A;font-size:13px;margin-top:6px;">Gizlilik Politikası · Privacy Policy</p>
+  <div style="margin-top:14px;">
+    <span class="badge active" onclick="setLang('tr')">🇹🇷 Türkçe</span>
+    <span class="badge" onclick="setLang('en')">🇬🇧 English</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ TÜRKÇE ════════════════════════════════════ -->
+<div class="tr">
+
+  <div class="section">
+    <h2>1. Giriş</h2>
+    <p>Bridge: Futbol Trivia ("uygulama"), 1v1 futbol bilgi yarışması mobil oyunudur. Bu politika, uygulamayı kullanırken hangi verileri topladığımızı, nasıl kullandığımızı ve haklarını açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsın.</p>
   </div>
 
-  <!-- TÜRKÇE -->
-  <div id="content-tr" class="content-section active">
-
-    <section>
-      <h2>1. Giriş</h2>
-      <p>
-        Köprü ("uygulama"), futbol temalı bir bilgi yarışması oyunudur. Bu politika,
-        uygulamayı kullanırken hangi verileri topladığımızı ve nasıl kullandığımızı açıklar.
-        Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsın.
-      </p>
-    </section>
-
-    <section>
-      <h2>2. Topladığımız Veriler</h2>
-      <ul>
-        <li><strong>Hesap bilgisi:</strong> Email adresi, kullanıcı adı, şifre (şifrelenmiş)</li>
-        <li><strong>Oyun verisi:</strong> Lig, LP, MMR, maç istatistikleri, kor bakiyesi</li>
-        <li><strong>Profil:</strong> Seçtiğin avatar veya yüklediğin fotoğraf</li>
-        <li><strong>Sosyal:</strong> Arkadaş listesi, gönderdiğin mesajlar</li>
-        <li><strong>Teknik:</strong> Cihaz tipi, IP adresi (spam koruması için)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>3. Kullanım Amacı</h2>
-      <ul>
-        <li>Hesabını açmak ve giriş yapmanı sağlamak</li>
-        <li>Seviyene uygun rakiplerle eşleştirmek</li>
-        <li>Liderlik tablosu ve sıralama göstermek</li>
-        <li>Arkadaşlarınla iletişim kurmanı sağlamak</li>
-        <li>Hile ve kötüye kullanımı engellemek</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>4. Üçüncü Taraflar</h2>
-      <p>Aşağıdaki servisler verilerini işler:</p>
-      <ul>
-        <li><strong>Supabase</strong> — veritabanı ve kimlik doğrulama</li>
-        <li><strong>Railway</strong> — sunucu altyapısı</li>
-      </ul>
-      <p>Verilerini asla üçüncü taraflara satmayız veya pazarlama amacıyla paylaşmayız.</p>
-    </section>
-
-    <section>
-      <h2>5. Veri Saklama</h2>
-      <p>
-        Verilerin, hesabın aktif olduğu sürece saklanır. Hesabını sildiğinde
-        kişisel verilerin 30 gün içinde kalıcı olarak silinir. İstatistikler
-        anonim hale getirilerek saklanabilir.
-      </p>
-    </section>
-
-    <section>
-      <h2>6. Hakların</h2>
-      <ul>
-        <li>Verilerine erişme hakkı</li>
-        <li>Yanlış bilgileri düzeltme hakkı</li>
-        <li>Hesabını ve verilerini silme hakkı</li>
-        <li>Veri taşınabilirliği hakkı</li>
-      </ul>
-      <p>Bu haklarını kullanmak için aşağıdaki e-postadan bize ulaşabilirsin.</p>
-    </section>
-
-    <section>
-      <h2>7. Çocukların Gizliliği</h2>
-      <p>
-        Uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaşın altındaki
-        kullanıcılardan bilerek veri toplamıyoruz. 13 yaş altı bir kullanıcının
-        kaydolduğunu fark edersek hesap silinir.
-      </p>
-    </section>
-
-    <section>
-      <h2>8. Değişiklikler</h2>
-      <p>
-        Bu politika zaman zaman güncellenebilir. Önemli değişiklikler olduğunda
-        uygulama içinde bildirim göstereceğiz. Güncel tarih aşağıdadır.
-      </p>
-    </section>
-
-    <section>
-      <h2>9. İletişim</h2>
-      <p>Sorularını, şikayetlerini veya veri taleplerini şu adrese gönderebilirsin:</p>
-      <p><a href="mailto:mertrocx@gmail.com">mertrocx@gmail.com</a></p>
-    </section>
-
-    <div class="meta">
-      <p><strong>Köprü Oyun</strong></p>
-      <p>Son güncelleme: 19 Nisan 2026</p>
-    </div>
-
+  <div class="section">
+    <h2>2. Topladığımız Veriler</h2>
+    <h3>Hesap Bilgisi</h3>
+    <ul>
+      <li>E-posta adresi (kayıt ve giriş için)</li>
+      <li>Kullanıcı adı (lakap)</li>
+      <li>Şifre (şifrelenmiş — düz metin olarak saklanmaz)</li>
+    </ul>
+    <h3>Oyun Verisi</h3>
+    <ul>
+      <li>Lig sıralaması, LP, maç istatistikleri</li>
+      <li>Kullandığın jokerler ve kazanılan ödüller</li>
+      <li>Günlük görev ve streak verileri</li>
+    </ul>
+    <h3>Profil</h3>
+    <ul>
+      <li>Seçtiğin avatar veya yüklediğin profil fotoğrafı</li>
+      <li>Aktif unvan (lakap)</li>
+    </ul>
+    <h3>Kullanıcı Tarafından Oluşturulan İçerik</h3>
+    <ul>
+      <li>Global sohbette gönderdiğin mesajlar</li>
+      <li>Arkadaşlarına gönderdiğin direkt mesajlar</li>
+    </ul>
+    <h3>Teknik Veriler</h3>
+    <ul>
+      <li>IP adresi (spam ve hile koruması için)</li>
+      <li>Cihaz tipi ve işletim sistemi (hata ayıklama için)</li>
+      <li>Çökme raporları ve performans verileri</li>
+    </ul>
   </div>
 
-  <!-- ENGLISH -->
-  <div id="content-en" class="content-section">
+  <div class="section">
+    <h2>3. Kullanım Amacı</h2>
+    <ul>
+      <li>Hesabını oluşturmak ve güvenli giriş sağlamak</li>
+      <li>Seviyene uygun rakiplerle eşleştirmek (MMR sistemi)</li>
+      <li>Lig sıralaması ve liderlik tablosu göstermek</li>
+      <li>Arkadaşlarınla sohbet etmeni ve oyun oynamanı sağlamak</li>
+      <li>Hile, spam ve kötüye kullanımı engellemek</li>
+      <li>Uygulama hatalarını tespit etmek ve düzeltmek</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>1. Introduction</h2>
-      <p>
-        Köprü ("the app") is a football-themed trivia game. This policy explains
-        what data we collect and how we use it. By using the app, you agree to this policy.
-      </p>
-    </section>
-
-    <section>
-      <h2>2. Data We Collect</h2>
-      <ul>
-        <li><strong>Account:</strong> Email, username, password (encrypted)</li>
-        <li><strong>Game data:</strong> League, LP, MMR, match stats, kor balance</li>
-        <li><strong>Profile:</strong> Avatar selection or uploaded photo</li>
-        <li><strong>Social:</strong> Friends list, messages you send</li>
-        <li><strong>Technical:</strong> Device type, IP address (for spam prevention)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>3. How We Use Data</h2>
-      <ul>
-        <li>Create and log in to your account</li>
-        <li>Match you with skill-appropriate opponents</li>
-        <li>Show leaderboard and rankings</li>
-        <li>Enable communication with friends</li>
-        <li>Prevent cheating and abuse</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>4. Third Parties</h2>
-      <p>The following services process your data:</p>
-      <ul>
-        <li><strong>Supabase</strong> — database and authentication</li>
-        <li><strong>Railway</strong> — server infrastructure</li>
-      </ul>
-      <p>We never sell or share your data for marketing purposes.</p>
-    </section>
-
-    <section>
-      <h2>5. Data Retention</h2>
-      <p>
-        Your data is kept as long as your account is active. When you delete your
-        account, personal data is permanently deleted within 30 days. Statistics
-        may be kept anonymously.
-      </p>
-    </section>
-
-    <section>
-      <h2>6. Your Rights</h2>
-      <ul>
-        <li>Right to access your data</li>
-        <li>Right to correct inaccurate information</li>
-        <li>Right to delete your account and data</li>
-        <li>Right to data portability</li>
-      </ul>
-      <p>To exercise these rights, contact us via the email below.</p>
-    </section>
-
-    <section>
-      <h2>7. Children's Privacy</h2>
-      <p>
-        The app is designed for users 13 years and older. We do not knowingly collect
-        data from children under 13. If we discover a user under 13 has registered,
-        the account will be deleted.
-      </p>
-    </section>
-
-    <section>
-      <h2>8. Changes</h2>
-      <p>
-        This policy may be updated from time to time. We will show in-app notifications
-        for significant changes. The current date is shown below.
-      </p>
-    </section>
-
-    <section>
-      <h2>9. Contact</h2>
-      <p>For questions, complaints, or data requests, please contact:</p>
-      <p><a href="mailto:mertrocx@gmail.com">mertrocx@gmail.com</a></p>
-    </section>
-
-    <div class="meta">
-      <p><strong>Köprü Oyun</strong></p>
-      <p>Last updated: April 19, 2026</p>
+  <div class="section">
+    <h2>4. Kullanıcı Tarafından Oluşturulan İçerik ve Güvenlik</h2>
+    <div class="highlight">
+      <p>Uygulamamız kullanıcılar arası mesajlaşma (Global Sohbet ve Direkt Mesaj) içermektedir. Bu özelliklerle ilgili önemli bilgiler:</p>
     </div>
+    <h3>İçerik Moderasyonu</h3>
+    <ul>
+      <li>Global Sohbet otomatik küfür filtresine sahiptir</li>
+      <li>Direkt mesajlar yalnızca karşılıklı kabul edilmiş arkadaşlar arasında kullanılabilir</li>
+      <li>Şüpheli içerikler inceleme için işaretlenebilir</li>
+    </ul>
+    <h3>Engelleme ve Şikayet</h3>
+    <ul>
+      <li><strong>Engelleme:</strong> Global Sohbet'te herhangi bir kullanıcının profiline tıklayarak o kullanıcıyı engelleyebilirsin. Engellenen kullanıcıların mesajları sana gösterilmez</li>
+      <li><strong>Şikayet:</strong> Aynı profil kartı üzerinden kullanıcıları şikayet edebilirsin. Şikayetler ekibimiz tarafından incelenir</li>
+    </ul>
+    <h3>Veri Saklama</h3>
+    <p>Mesajlar sunucularımızda saklanır. Hesabını sildiğinde tüm mesajların da silinir.</p>
+  </div>
 
+  <div class="section">
+    <h2>5. Üçüncü Taraflar</h2>
+    <ul>
+      <li><strong>Supabase</strong> — veritabanı, kimlik doğrulama ve dosya depolama (ABD sunucuları)</li>
+      <li><strong>Railway</strong> — uygulama sunucu altyapısı</li>
+      <li><strong>Expo / EAS</strong> — uygulama derleme ve dağıtım</li>
+    </ul>
+    <p>Verilerini asla üçüncü taraflara satmayız veya pazarlama amacıyla paylaşmayız.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Veri Saklama ve Silme</h2>
+    <ul>
+      <li>Verilerin hesabın aktif olduğu sürece saklanır</li>
+      <li>Hesabını sildiğinde kişisel veriler <strong>30 gün içinde kalıcı olarak silinir</strong></li>
+      <li>Anonim istatistikler daha uzun süre saklanabilir</li>
+      <li>Hesap silme işlemini uygulama içi Ayarlar → Tehlikeli Bölge menüsünden yapabilirsin</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>7. Hakların</h2>
+    <ul>
+      <li>Verilerine erişme hakkı</li>
+      <li>Yanlış bilgileri düzeltme hakkı</li>
+      <li>Hesabını ve tüm verilerini silme hakkı</li>
+      <li>Veri taşınabilirliği hakkı</li>
+      <li>İşlemeye itiraz etme hakkı</li>
+    </ul>
+    <p>Bu haklarını kullanmak için aşağıdaki e-posta adresinden bizimle iletişime geçebilirsin.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaşın altındaki kullanıcılardan bilerek veri toplamıyoruz. 13 yaş altı bir kullanıcının kaydolduğunu fark edersek hesap derhal silinir.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Güvenlik</h2>
+    <p>Verilerini korumak için endüstri standardı güvenlik önlemleri kullanıyoruz. Şifreler asla düz metin olarak saklanmaz. Tüm veri iletişimi HTTPS üzerinden şifrelenir.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Değişiklikler</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikler olduğunda uygulama içinde bildirim göstereceğiz.</p>
+  </div>
+
+  <div class="section">
+    <h2>11. İletişim</h2>
+    <div class="contact-box">
+      <p style="color:#5A6E5A;font-size:12px;margin-bottom:8px;">Sorular, şikayetler veya veri talepleri için:</p>
+      <a href="mailto:mertrocx@gmail.com">mertrocx@gmail.com</a>
+      <p style="color:#5A6E5A;font-size:11px;margin-top:8px;">Mert Kaplan · Bridge: Futbol Trivia</p>
+    </div>
   </div>
 
 </div>
+<!-- ════════════════════════════════════ END TR ════════════════════════════════════ -->
+
+<!-- ════════════════════════════════════ ENGLISH ════════════════════════════════════ -->
+<div class="en">
+
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>Bridge: Futbol Trivia ("the app") is a 1v1 football trivia mobile game. This policy explains what data we collect, how we use it, and your rights. By using the app, you agree to this policy.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Data We Collect</h2>
+    <h3>Account Information</h3>
+    <ul>
+      <li>Email address (for registration and login)</li>
+      <li>Username (nickname)</li>
+      <li>Password (encrypted — never stored as plain text)</li>
+    </ul>
+    <h3>Game Data</h3>
+    <ul>
+      <li>League ranking, LP, match statistics</li>
+      <li>Jokers used and rewards earned</li>
+      <li>Daily tasks and streak data</li>
+    </ul>
+    <h3>Profile</h3>
+    <ul>
+      <li>Selected avatar or uploaded profile photo</li>
+      <li>Active title (nickname)</li>
+    </ul>
+    <h3>User-Generated Content</h3>
+    <ul>
+      <li>Messages sent in Global Chat</li>
+      <li>Direct messages sent to friends</li>
+    </ul>
+    <h3>Technical Data</h3>
+    <ul>
+      <li>IP address (for spam and cheat protection)</li>
+      <li>Device type and OS (for debugging)</li>
+      <li>Crash reports and performance data</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. How We Use Data</h2>
+    <ul>
+      <li>Create your account and enable secure login</li>
+      <li>Match you with skill-appropriate opponents (MMR system)</li>
+      <li>Show league rankings and leaderboards</li>
+      <li>Enable chat and gameplay with friends</li>
+      <li>Prevent cheating, spam, and abuse</li>
+      <li>Detect and fix app errors</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. User-Generated Content &amp; Safety</h2>
+    <div class="highlight">
+      <p>Our app includes user-to-user messaging (Global Chat and Direct Messages). Important information about these features:</p>
+    </div>
+    <h3>Content Moderation</h3>
+    <ul>
+      <li>Global Chat has an automatic profanity filter</li>
+      <li>Direct messages are only available between mutually accepted friends</li>
+      <li>Suspicious content can be flagged for review</li>
+    </ul>
+    <h3>Blocking and Reporting</h3>
+    <ul>
+      <li><strong>Block:</strong> You can block any user by tapping their profile in Global Chat. Blocked users' messages will not be shown to you</li>
+      <li><strong>Report:</strong> You can report users from the same profile card. Reports are reviewed by our team</li>
+    </ul>
+    <h3>Data Retention</h3>
+    <p>Messages are stored on our servers. When you delete your account, all your messages are deleted as well.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Third Parties</h2>
+    <ul>
+      <li><strong>Supabase</strong> — database, authentication, and file storage (US servers)</li>
+      <li><strong>Railway</strong> — application server infrastructure</li>
+      <li><strong>Expo / EAS</strong> — app build and distribution</li>
+    </ul>
+    <p>We never sell your data or share it for marketing purposes.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Data Retention &amp; Deletion</h2>
+    <ul>
+      <li>Your data is kept as long as your account is active</li>
+      <li>When you delete your account, personal data is <strong>permanently deleted within 30 days</strong></li>
+      <li>Anonymous statistics may be retained longer</li>
+      <li>You can delete your account via Settings → Danger Zone in the app</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>7. Your Rights</h2>
+    <ul>
+      <li>Right to access your data</li>
+      <li>Right to correct inaccurate information</li>
+      <li>Right to delete your account and all data</li>
+      <li>Right to data portability</li>
+      <li>Right to object to processing</li>
+    </ul>
+    <p>To exercise these rights, contact us via the email below.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Children's Privacy</h2>
+    <p>The app is designed for users 13 years and older. We do not knowingly collect data from children under 13. If we discover a user under 13 has registered, the account will be immediately deleted.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Security</h2>
+    <p>We use industry-standard security measures to protect your data. Passwords are never stored as plain text. All data communication is encrypted via HTTPS.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Changes</h2>
+    <p>This policy may be updated from time to time. We will show in-app notifications for significant changes.</p>
+  </div>
+
+  <div class="section">
+    <h2>11. Contact</h2>
+    <div class="contact-box">
+      <p style="color:#5A6E5A;font-size:12px;margin-bottom:8px;">For questions, complaints, or data requests:</p>
+      <a href="mailto:mertrocx@gmail.com">mertrocx@gmail.com</a>
+      <p style="color:#5A6E5A;font-size:11px;margin-top:8px;">Mert Kaplan · Bridge: Futbol Trivia</p>
+    </div>
+  </div>
+
+</div>
+<!-- ════════════════════════════════════ END EN ════════════════════════════════════ -->
+
+<p class="updated">Son güncelleme / Last updated: 13 Mayıs 2026</p>
 
 <script>
-  function switchLang(lang) {
-    document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-    document.getElementById('content-' + lang).classList.add('active');
-    document.getElementById('btn-' + lang).classList.add('active');
-    document.getElementById('headerTitle').textContent =
-      lang === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy';
-    document.documentElement.lang = lang;
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.querySelectorAll('.badge').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
   }
 </script>
 </body>
